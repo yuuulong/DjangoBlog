@@ -205,7 +205,7 @@ def save_user_avatar(url):
             logger.info('保存用户头像:' + basepath + savefilename)
             with open(basepath + savefilename, 'wb+') as file:
                 file.write(rsp.content)
-            return 'https://resource.yuuulong.com/avatar/' + savefilename
+            return 'http://plcnwjj94.bkt.clouddn.com/b3c62e943e1669d7400c12068d8a9ec4b4d3010d2003f-OYVWqm.png' + savefilename
     except Exception as e:
         logger.error(e)
         return url
