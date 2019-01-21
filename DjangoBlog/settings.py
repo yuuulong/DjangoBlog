@@ -204,7 +204,6 @@ CACHES = {
 }
 
 # SITE_ID = 1
-# BAIDU_NOTIFY_URL = "http://data.zz.baidu.com/urls?site=https://www.lylinux.net&token=1uAOGrMsUm5syDGn"
 
 
 

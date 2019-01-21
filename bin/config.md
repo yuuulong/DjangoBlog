@@ -40,16 +40,13 @@ SERVER_EMAIL = os.environ.get('DJANGO_EMAIL_USER')
 ```
 为你自己的邮箱配置。
 
-## 微信公众号
-集成了简单的微信公众号功能，在微信后台将token地址设置为:`你的域名/robot` 即可，默认token为`lylinux`，当然你可以修改为你自己的，在`servermanager/robot.py`中。
+
 然后在**后台->Servermanager->命令**中新增命令，这样就可以使用微信公众号来管理了。  
 ## 网站配置介绍  
 在**后台->BLOG->网站配置**中,可以新增网站配置，比如关键字，描述等，以及谷歌广告，网站统计代码及备案号等等。  
 其中的*静态文件保存地址*是保存oauth用户登录的头像路径，填写绝对路径，默认是代码目录。
 ## 代码高亮
 如果你发现你文章的代码没有高亮，请这样书写代码块:  
-
-![](https://resource.lylinux.net/image/codelang.png)  
 
 
 也就是说，需要在代码块开始位置加入这段代码对应的语言。

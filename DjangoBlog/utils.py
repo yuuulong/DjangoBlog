@@ -205,7 +205,7 @@ def save_user_avatar(url):
             logger.info('保存用户头像:' + basepath + savefilename)
             with open(basepath + savefilename, 'wb+') as file:
                 file.write(rsp.content)
-            return 'https://resource.lylinux.net/avatar/' + savefilename
+            return 'https://resource.yuuulong.com/avatar/' + savefilename
     except Exception as e:
         logger.error(e)
         return url
