@@ -14,7 +14,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         users = OAuthUser.objects.filter(picture__isnull=False).exclude(
-            picture__istartswith='https://yuuulong.com').all()
+            picture__istartswith='https://yuuulong.com/home/DjangoBlog/media/').all()
         self.stdout.write('开始同步{count}个用户头像'.format(count=len(users)))
         for u in users:
             self.stdout.write('开始同步:{id}'.format(id=u.nikename))
