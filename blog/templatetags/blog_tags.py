@@ -275,7 +275,7 @@ def gravatar_url(email, size=40):
                 return o[0].picture
         email = email.encode('utf-8')
 
-        default = "https://yuuulong.com/home/DjangoBlog/media//b3c62e943e1669d7400c12068d8a9ec4b4d3010d2003f-OYVWqm.png".encode('utf-8') 
+        default = "https://yuuulong.com/home/DjangoBlog/media/upload/mugshots/bf69aa058231641f6b0500bda70794b088c257c811fc6-2BM9PO.png".encode('utf-8') 
 
         url = "https://www.gravatar.com/avatar/%s?%s" % (
             hashlib.md5(email.lower()).hexdigest(), urllib.parse.urlencode({'d': default, 's': str(size)}))
