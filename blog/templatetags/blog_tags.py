@@ -275,6 +275,8 @@ def gravatar_url(email, size=40):
                 return o[0].picture
         email = email.encode('utf-8')
 
+        default = "http://plcnwjj94.bkt.clouddn.com/b3c62e943e1669d7400c12068d8a9ec4b4d3010d2003f-OYVWqm.png".encode('utf-8') 
+
         url = "https://www.gravatar.com/avatar/%s?%s" % (
             hashlib.md5(email.lower()).hexdigest(), urllib.parse.urlencode({'d': default, 's': str(size)}))
         cache.set(cachekey, url, 60 * 60 * 10)

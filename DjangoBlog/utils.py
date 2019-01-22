@@ -199,13 +199,13 @@ def save_user_avatar(url):
                 os.makedirs(basepath)
 
             imgextensions = ['.jpg', '.png', 'jpeg', '.gif']
-            isimage = len([i for i in imgextensions if url.endswith(i)]) > 0
+            isimage = len([i for i in imgextensions if url.endswith(i)]) > 0 
             ext = os.path.splitext(url)[1] if isimage else '.jpg'
             savefilename = str(uuid.uuid4().hex) + ext
             logger.info('保存用户头像:' + basepath + savefilename)
             with open(basepath + savefilename, 'wb+') as file:
                 file.write(rsp.content)
-            return 'http://plcnwjj94.bkt.clouddn.com/b3c62e943e1669d7400c12068d8a9ec4b4d3010d2003f-OYVWqm.png' + savefilename
+            return 'https://yuuulong.com/home/DjangoBlog/media' + savefilename
     except Exception as e:
         logger.error(e)
         return url
