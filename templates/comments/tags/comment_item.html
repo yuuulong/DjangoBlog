@@ -3,14 +3,14 @@
     <div id="div-comment-{{ comment_item.pk }}" class="comment-body">
         <div class="comment-author vcard">
             <img alt=""
-                 src="plcnwjj94.bkt.clouddn.com/b3c62e943e1669d7400c12068d8a9ec4b4d3010d2003f-OYVWqm.png"
-                 srcset="plcnwjj94.bkt.clouddn.com/b3c62e943e1669d7400c12068d8a9ec4b4d3010d2003f-OYVWqm.png"
+                src="{{ comment_item.author.email|gravatar_url:150 }}"
+                srcset="{{ comment_item.author.email|gravatar_url:150 }}"
                  
                  class="avatar avatar-96 photo" height="96" width="96">
             <cite class="fn">
                 <a rel="nofollow"
                         {% if comment_item.author.is_superuser %}
-                   href="{{ get_absolute_url }}"
+                   href="{{ comment_item.author.get_absolute_url }}"
                         {% else %}
                    href="#"
                         {% endif %}

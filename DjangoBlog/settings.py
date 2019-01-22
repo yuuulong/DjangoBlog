@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ['SECRET_KEY_BLOG']  # 将密码保存在本地环境变量，如果丢失可以重新生成
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 TESTING = len(sys.argv) > 1 and sys.argv[1] == 'test'
