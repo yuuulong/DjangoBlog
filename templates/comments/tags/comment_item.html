@@ -10,7 +10,7 @@
             <cite class="fn">
                 <a rel="nofollow"
                         {% if comment_item.author.is_superuser %}
-                   href="{{ comment_item.author.get_absolute_url }}"
+                   href="{{ get_absolute_url }}"
                         {% else %}
                    href="#"
                         {% endif %}
